@@ -43,6 +43,13 @@ h1 {
   color: #439A97;
 }
 h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  color: #62B6B7;
+  margin-top: 1em;
+}
+h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.4;
@@ -97,12 +104,12 @@ table {
   font-weight: 400;
   color: #62B6B7;
 }
-.sample {
+.example {
   border: 1px solid #ddd;
   padding: 1em;
   margin-bottom: 1em;
 }
-.sample p {
+.example p {
   font-size: 0.85em;
   margin: 0.2em 0;
 }
@@ -148,39 +155,50 @@ p.download a:hover {
   <div class="container">
     <div class="content">
       <div id="side" class="col">
-        <div class="key"><i class="fa fa-github fa-3x"></i></div>
-        <div class="value"><a href="https://github.com/watchstefa-3xp/glow-tts-jejueo-dialect">TTS project</a></div>
+        <div class="key"><i class="fa fa-github fa-2x"></i></div>
+        <div class="value"><a href="https://github.com/watchstefa-3xp/glow-tts-jejueo">project repo</a></div>
         <div class="key">Dataset</div>
         <div class="value"><a href="https://github.com/kakaobrain/jejueo">JSS Dataset</a></div>
         <div class="key">Model</div>
-        <div class="value">by <a href="https://tts.readthedocs.io/en/latest/index.html">🐸Couqi TTS</a></div>
+        <div class="value"><a href="https://tts.readthedocs.io/en/latest/index.html">🐸Couqi TTS</a></div>
       </div>
       <div id="main" class="col">
         <h1>Text to Speech (TTS) for Jejueo</h1>
+        <h2>제주어 음성합성 - Glow-TTS & HiFi-GAN 기반</h2>
         <p>
-This project is a public domain speech dataset consisting of 13,100 short audio clips
-of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each clip.
-Clips vary in length from 1 to 10 seconds and have a total length of approximately
-24 hours.
+This project is Single Speaker Text to Speech (TTS) for Jejueo.
+<b>Glow-TTS</b>(Generative Flow for Text-to-Speech is used for Text2Mel (Text to MelSpectrogram).
+<b>HiFi-GAN</b>(Generative Adversarial Networks for efficient and High Fidelity speech synthesis) vocoder is used for Mel2Audio (MelSpectrogram to Audio).
+The models are trained with JSS (Jejueo Single Speaker) Speech Dataset.
        </p>
         <p>
 
-The texts were published between 1884 and 1964, and are in the public domain. The audio was
-recorded in 2016-17 by the <a href="https://librivox.org">LibriVox</a> project and is also in the
-public domain.
+Glow-TTS and HiFi-GAN models are based on <a href="https://tts.readthedocs.io/en/latest/index.html">🐸Couqi TTS</a> 
         </p>
         <p class="download">
           <a href="https://www.kaggle.com/datasets/bryanpark/jejueo-single-speaker-speech-dataset" download>Download JJS Dataset (4 GB)</a>
         </p>
 
-        <h2>Sample Data</h2>
-        <div class="sample">
-          <audio src="audio/" controls preload="metadata"></audio>
-          <p>The examination and testimony of the experts enabled the Commission to conclude that five shots may have been fired,</p>
+        <h3>Result Examples</h3>
+        <div class="example">
+          <p>혼저옵세예<br>(어서 오세요)</p>
+          <audio src="audio/example1.wav" controls preload="metadata"></audio>
         </div>
-        <div class="sample">
-          <audio src="audio/" controls preload="metadata"></audio>
-          <p>Many animals of even complex structure which live parasitically within others are wholly devoid of an alimentary cavity.</p>
+        <div class="example">
+          <p>절 아명 벨딱 벨딱 일어사도 제주 빌덜은 바당 소곱에도 뜨메 <br>(물결 아무리 성내며 일어서도 제주 별들은 바다 속에도 뜨네)</p>
+          <audio src="audio/example2.wav" controls preload="metadata"></audio>
+        </div>
+        <div class="example">
+          <p>알앗수다. 온덴 헌 건 어떵 됌수꽈?</p>
+          <audio src="audio/example3.wav" controls preload="metadata"></audio>
+        </div>
+        <div class="example">
+          <p>맞젠 헴나? 정신 똑바로 촐리라이 <br>(맞고 싶나? 정신 똑바로 차려라)</p>
+          <audio src="audio/example4.wav" controls preload="metadata"></audio>
+        </div>
+        <div class="example">
+          <p>두린 아이 때의 레옹 베르트한티 이 책을 안내쿠다 <br>(어린이였을 때의 레옹 베르트에게 이 책을 바친다)</p>
+          <audio src="audio/example5.wav" controls preload="metadata"></audio>
         </div>
       </div>
     </div>
